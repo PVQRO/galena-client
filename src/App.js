@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
+import List from './Components/List'
+import UploadReport from './Components/UploadReport';
+import { Col, Row } from 'reactstrap'
+import Details from './Components/Details';
+import Header from './Components/Header';
+import Controlador from './Components/Controlador';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Fragment>
+      <Header />
+      <br/>
+      <br/>
+        <Row>
+            <Col className="col">
+            </Col>
+            <Col className="col-6">
+                <Controlador />
+            </Col>
+            <Col className="col">
+            </Col>
+        </Row>
+        
+    </Fragment>
     </div>
   );
 }
