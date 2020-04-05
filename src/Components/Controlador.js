@@ -5,6 +5,8 @@ import { Col, Row } from 'reactstrap'
 import Details from './Details';
 import Header from './Header';
 
+import { getReports } from '../API';
+
 function Controlador() {
 
     const [ datos, setDatos ] = useState([
@@ -34,9 +36,19 @@ function Controlador() {
         }
     ]);
 
+    // useEffect(()=>{
+    //     console.log(datos)
+    // },[datos])
+
     useEffect(()=>{
+        const consultaApi = async () => {
+            const datos = await getReports()
+            setDatos(datos)
+            console.log(datos)
+        }
+        consultaApi();
         console.log(datos)
-    },[datos])
+    },[])
 
     return (
         <div className="App">

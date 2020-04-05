@@ -1,4 +1,4 @@
-import React, {useCallback, useMemo, Fragment} from 'react';
+import React, {useCallback, useMemo, Fragment, useState} from 'react';
 import {useDropzone} from 'react-dropzone';
 import { Button } from 'reactstrap';
 
@@ -37,14 +37,23 @@ const rejectStyle = {
 };
 
 function MyDropzone(props) {
-  const onDrop = useCallback(acceptedFiles => {
+
+  const { setb64File, setFiles } = props
+
+  const onDrop  = useCallback(acceptedFiles => {
     // Do something with the files
     console.log(acceptedFiles)
-    props.setFiles(acceptedFiles)
+    getBase64(acceptedFiles[0], (res) => {
+      setb64File(res);
+      console.log(res)
+    });
+    setFiles(acceptedFiles)
   }, [])
   const {getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject, acceptedFiles} = useDropzone({
     accept: 'application/pdf',
-    onDrop})
+    multiple: false,
+    onDrop
+  })
 
   const style = useMemo(() => ({
     ...baseStyle,
@@ -61,6 +70,17 @@ function MyDropzone(props) {
       {file.path} - {file.size} bytes
     </li>
   ));
+
+  const getBase64 = (file, cb) => {
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+        cb(reader.result)
+    };
+    reader.onerror = function (error) {
+        console.log('Error: ', error);
+    };
+}
 
   return (
     <Fragment>

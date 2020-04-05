@@ -2,9 +2,12 @@ import React, { Fragment, useState, useEffect } from 'react';
 import MyDropzone from './MyDropZone'
 import { Button } from 'reactstrap'
 
+import { getReports, postReports } from '../API';
+
 function UploadReport(props) {
 
     const [ files, setFiles ] = useState([])
+    const [ b64File, setb64File ] = useState()
 
     const create_UUID = () => {
         var dt = new Date().getTime();
@@ -36,20 +39,23 @@ function UploadReport(props) {
     }
 
     useEffect(()=>{
-        console.log(files)
-    }, [files])
+        console.log(b64File)
+    }, [b64File])
 
-    const saveFiles = () => {
-        // const reports = []
+
+    const saveFiles = async () => {
+        let report = {}
         console.log(create_UUID())
+        console.log(files)
         files.forEach(file => {
-            const report = {
+            report = {
                 reportID: create_UUID(),
                 status: 1,
                 inclusionDate: getTimeStamp()[2],
                 inclusionDateLong: getTimeStamp()[1],
                 inclusionTimeStamp: getTimeStamp()[0],
                 report: file,
+                // b64File: b64File,
                 nlpDate: null,
                 url: '#',
                 user: 'Fadel'
@@ -57,6 +63,7 @@ function UploadReport(props) {
             // reports.push(report)
             props.setDatos([...props.datos, report])
         })
+        await postReports(report)
         // console.log(reports)
         // props.setDatos([...props.datos, reports[0]])
     }
@@ -64,7 +71,7 @@ function UploadReport(props) {
     return (
         <div>
             <Fragment>
-                <MyDropzone setFiles={setFiles}/>
+                <MyDropzone setFiles={setFiles} setb64File={setb64File}/>
                 <Button className="btn-block" onClick={saveFiles} disabled={files.length===0 ? true : false} hidden={files.length===0 ? true : false}>
                     Subir informe(s)
                 </Button>
