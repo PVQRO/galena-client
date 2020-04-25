@@ -10,6 +10,7 @@ export const postReports = async (report) => {
       body: JSON.stringify(report)
     }
 
+    /* Get all the reports after saving the new one */
     return fetch(API_URL+'/reports', options)
             .then(res => res.json());
 }

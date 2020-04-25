@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../galena.png';
+import logo from '../Style/galena-icon-white-border.png';
 import {
   Collapse,
   Navbar,
@@ -15,11 +15,18 @@ import {
   NavbarText
 } from 'reactstrap';
 
+
+
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
+  const navBarStyle = {
+    fontStyle: "bold",
+    fontSize: "bold",
+    color: "red",
+  }
 
   return (
     <div>

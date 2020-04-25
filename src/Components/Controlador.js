@@ -10,7 +10,7 @@ import { getReports } from '../API';
 function Controlador() {
 
     const [ datos, setDatos ] = useState([
-        {
+       /*  {
             reportID: '0000-0011',
             status: 10,
             inclusionDate: '5-4-2020    ',
@@ -33,6 +33,14 @@ function Controlador() {
             nlpDate: '5-4-2020',
             url: '#',
             user: 'Fadel'
+        } */
+        {
+            reportID: '0000-0012',
+            status: 1,
+            inclusionDate: '26-4-2020',
+            nlpDate: '26-4-2020',
+            url: '#',
+            user: 'Fadel'
         }
     ]);
 
@@ -44,7 +52,7 @@ function Controlador() {
         const consultaApi = async () => {
             const datos = await getReports()
             setDatos(datos)
-            console.log(datos)
+            console.log('consultaApi: datos: ', datos)
         }
         consultaApi();
         console.log(datos)
@@ -55,6 +63,7 @@ function Controlador() {
 
             <Fragment>
                 <UploadReport setDatos={setDatos} datos={datos}/>
+                <h3 style={{ textAlign: "center" }}>Uploaded reports to the DB</h3>
                 <br/>
                 <List datos={datos}/>
             </Fragment>

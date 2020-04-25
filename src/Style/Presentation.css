@@ -1,0 +1,33 @@
+
+#presentation-main {
+    width: 100vw;
+    height: 100vh;
+    background-color: darkslategray;
+    /* background-color: #103174; */
+    padding-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+#presentation-main p {
+    width: 50%;
+    font-style: italic;
+    font-size: 20pt;
+    text-align: center;
+    display: inline-block;
+    margin: 80px 0 100px 0;
+}
+
+#presentation-main > div {
+    width: 100vw;
+    height: 100vh;
+    background: url('galena-icon-green.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 60pt;
+}

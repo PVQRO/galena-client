@@ -1,31 +1,32 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "mdbreact/dist/css/mdb.css";
+
 import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import List from './Components/List'
 import UploadReport from './Components/UploadReport';
-import { Col, Row } from 'reactstrap'
+import UploadPage from './Components/UploadPage';
 import Details from './Components/Details';
 import Header from './Components/Header';
-import Controlador from './Components/Controlador';
+import Presentation from './Components/Presentation';
+
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
 
-      <Fragment>
-      <Header />
-      <br/>
-      <br/>
-        <Row>
-            <Col className="col">
-            </Col>
-            <Col className="col-6">
-                <Controlador />
-            </Col>
-            <Col className="col">
-            </Col>
-        </Row>
-        
-    </Fragment>
-    </div>
+        <Fragment>
+        <Header />
+        <Switch>
+          <Route path="/upload" component={UploadPage} />
+          <Presentation />
+        </Switch>
+        </Fragment>
+      </div>
+    </Router>
   );
 }
 
