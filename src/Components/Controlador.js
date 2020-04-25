@@ -55,11 +55,8 @@ function Controlador() {
         const consultaApi = async () => {
             const datos = await getReports()
             setDatos(datos)
-<<<<<<< HEAD
             console.log('consultaApi: datos: ', datos)
-=======
-            console.log(datos)
->>>>>>> 25ce949c8e8515fb45275842f9ba56f7c416ffab
+
         }
         consultaApi();
         console.log(datos)
@@ -70,10 +67,9 @@ function Controlador() {
 
             <Fragment>
                 <UploadReport setDatos={setDatos} datos={datos}/>
-<<<<<<< HEAD
+
                 <h3 style={{ textAlign: "center" }}>Uploaded reports to the DB</h3>
-=======
->>>>>>> 25ce949c8e8515fb45275842f9ba56f7c416ffab
+
                 <br/>
                 <List datos={datos}/>
             </Fragment>
