@@ -1,0 +1,35 @@
+body{
+    background-color: #f2f2f2!important;
+}
+
+.results-viewer{
+    height: 85vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.results-viewer .diagnostic, .result-list{
+    background-color: white;
+    -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.4);
+
+    height: 79vh;
+    vertical-align: top;
+    margin-right: 1rem; margin-left: 1rem;
+    border-radius: 5px;
+
+}
+
+.diagnostic{
+    max-width: 50%;
+}
+
+.result-list{
+    max-width: 35%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
