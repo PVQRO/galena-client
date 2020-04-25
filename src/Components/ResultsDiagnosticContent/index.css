@@ -1,0 +1,13 @@
+.diagnostic-content {
+    height: 75%;
+}
+
+.diagnostic-content{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 12px!important;
+}
+
+.diagnostic-content img{
+    width: 75%!important;
+}

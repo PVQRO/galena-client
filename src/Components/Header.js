@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../Style/galena-icon-white-border.png';
+
 import {
   Collapse,
   Navbar,
@@ -14,8 +15,6 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
-
-
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);

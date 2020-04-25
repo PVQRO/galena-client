@@ -27,6 +27,7 @@ function App() {
         </Fragment>
       </div>
     </Router>
+
   );
 }
 
