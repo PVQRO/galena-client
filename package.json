@@ -17,7 +17,9 @@
     "react-icons": "^3.10.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
+    "react-select": "^3.1.0",
     "reactstrap": "^8.4.1",
+    "select-react": "^1.0.9",
     "xml-js": "^1.6.11"
   },
   "scripts": {

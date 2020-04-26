@@ -50,7 +50,7 @@ function Controlador() {
             inclusionDate: '26-4-2020',
             inclusionTime: '13:03:34',
             nlpDate: '26-4-2020',
-            url: '#',
+            url: '/result',
             user: 'Fadel'
         }
     ]);
