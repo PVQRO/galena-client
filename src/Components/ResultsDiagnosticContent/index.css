@@ -28,12 +28,17 @@
             width: 90%!important;
         }
     }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1600px) and (min-height: 900){
         .diagnostic-content img{
             width: 80%!important;
         }
     }
-    @media screen and (max-width: 1425px) {
+    @media screen and (max-width: 1425px) and (max-height: 800){
+        .diagnostic-content img{
+            width: 65%!important;
+        }
+    }
+    @media screen and (max-width: 1425px){
         .diagnostic-content img{
             width: 70%!important;
         }
@@ -74,4 +79,8 @@
 
 .filiacion{
     background-color: #e600e6;
+}
+
+.tratamiento{
+    background-color: #0000ff;
 }

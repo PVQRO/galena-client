@@ -37,13 +37,18 @@
         font-size: 14px;
         width: 30%
         }
+        @media screen and (max-height: 800px){
+            .categories section > div{
+                font-size: 11px;
+            }
+        }
 
 .categories-selection-buttons{
     display: flex; flex-direction: column;
 }
 
 .categories-export-buttons{
-    margin-top: 1rem; margin-right: 0.5rem;
+    margin-top: 1rem;
     }.categories-export-buttons > div{
         display: flex; flex-direction: column;
     }
