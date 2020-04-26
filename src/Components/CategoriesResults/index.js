@@ -10,7 +10,8 @@ export default function CategoriesContent(props){
                                                             {leyend: 'Filiacion' , class:  'filiacion'},
                                                             {leyend:'Antecedentes' , class:  'antecedentes'},
                                                             {leyend:'Factores de Riesgo' , class:  'factores-riesgo'},
-                                                            {leyend:'Signos' , class:  'signos'}]);
+                                                            {leyend:'Signos' , class:  'signos'},
+                                                            {leyend: 'Tratamiento', class: 'tratamiento'  }]);
 
     const deleteAllMarkedCategories = function(){
         unOrcheckedAllCheckBoxes(false)
@@ -18,8 +19,9 @@ export default function CategoriesContent(props){
         for(var category of categoriesClasses){
             var clas = category.class;
             var elementsWithClass = document.getElementsByClassName(clas);
+            const cloneelementsWithClass = [...elementsWithClass];
 
-            for(var e of elementsWithClass){
+            for(var e of cloneelementsWithClass){
                 e.classList.add(clas + '-hide')
                 e.classList.remove(clas)
             }
@@ -29,49 +31,35 @@ export default function CategoriesContent(props){
     const markCategory = function(category){
         var clas = categoriesClasses.filter(cat => cat.leyend == category )[0].class;
         var elementsWithClass = document.getElementsByClassName(clas + '-hide');
+        const cloneelementsWithClass = [...elementsWithClass];
 
-        for(var e of elementsWithClass){
+        for(var e of cloneelementsWithClass){
             e.classList.add(clas)
             e.classList.remove(clas + '-hide')
         }
     };
 
     const selectAllMarkedCategories = function(){
+
         unOrcheckedAllCheckBoxes(true);
-
-        for(var category of categoriesClasses){
-            var clas = category.class;
-            var elementsWithClass = document.getElementsByClassName(clas + '-hide');
-
-            for(var e of elementsWithClass){
-                e.classList.add(clas)
-                e.classList.remove(clas + '-hide')
-            }
-        }
+        for(var category of categoriesClasses) markCategory(category.leyend)
     };
 
     const unOrcheckedAllCheckBoxes = function(state){
-        var checkInputs = document.getElementsByClassName('form-check-input');
-
-        for(var input of checkInputs){
-            input.checked = state;
-        }
+        Array.from(document.getElementsByClassName('form-check-input')).map(input =>  input.checked = state);
     };
 
     const selectCategory = function(e){
 
         if(e.target.tagName == 'LABEL'){
             var category = e.target.innerText;
-            var parent = e.target.parentNode;
-            var checkbox = parent.childNodes[0]
+            var checkbox = e.target.parentNode.childNodes[0];
         }else if(e.target.tagName == 'INPUT'){
-            var parent = e.target.parentNode;
-            var checkbox = parent.childNodes[0]
-            var category = parent.childNodes[1].innerText
+            var checkbox = e.target.parentNode.childNodes[0];
+            var category = e.target.parentNode.childNodes[1].innerText;
         }else if(e.target.tagName == 'DIV'){
-            var parent = e.target;
-            var checkbox = parent.childNodes[0]
-            var category = parent.childNodes[1].innerText
+            var checkbox = e.target.childNodes[0];
+            var category = e.target.parentNode.childNodes[1].innerText;
         }
 
         deleteAllMarkedCategories();
@@ -114,17 +102,19 @@ export default function CategoriesContent(props){
                                 <input type="checkbox" className="form-check-input" checked="true" />
                                 <label className="form-check-label" for="exampleCheck1">Signos</label>
                             </div>
+                            <div class="form-check" style={{backgroundColor: "#0000ff"}} onClick={selectCategory}>
+                                <input type="checkbox" className="form-check-input" checked="true" />
+                                <label className="form-check-label" for="exampleCheck1">Tratamiento</label>
+                            </div>
                         </section>
                     </div>
                     <div className="col-md-3 categories-selection-buttons">
                         <button className="bt" onClick={selectAllMarkedCategories}>SELECCIONAR TODO</button>
                         <button className="bt" onClick={deleteAllMarkedCategories}>BORRAR TODO</button>
-                    </div>
-                </div>
-                <div className="row categories-export-buttons">
-                    <div className="col-md-3 offset-md-9">
-                        <button className="bt">Exportar CSV</button>
-                        <Link to="/upload"><button className="bt">Cancelar</button></Link>
+                        <div className="categories-export-buttons">
+                            <button className="bt">Exportar CSV</button>
+                            <Link to="/upload"><button className="bt">Cancelar</button></Link>
+                        </div>
                     </div>
                 </div>
     </div>
