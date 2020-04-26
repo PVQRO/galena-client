@@ -1,6 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import MyDropzone from './MyDropZone'
-import { Button } from 'reactstrap'
+import MyDropzone from './MyDropZone';
+import { Button } from 'reactstrap';
+import { findDOMNode } from 'react-dom';
+import $ from 'jquery';
 
 import { getReports, postReports } from '../API';
 
@@ -20,38 +22,46 @@ function UploadReport(props) {
     }
 
     const getTimeStamp = () => {
-    const timestamp = [];
-    let date = new Date()
+        const timestamp = [];
+        let date = new Date()
 
-    let day = date.getDate()
-    let month = date.getMonth() + 1
-    let year = date.getFullYear()
-    let fecha=(`${day}-${month}-${year}`)
-    
-    
-    timestamp[0] = Date.now();
-    timestamp[1] = Date().toLocaleString();
-    timestamp[2] = fecha
-    
-    // console.log(timestamp[1]);
+        let day = date.getDate()
+        let month = date.getMonth() + 1
+        let year = date.getFullYear()
+        let fecha=(`${day}-${month}-${year}`)
 
-    return timestamp
+        let hours = date.getHours() > 10 ? String(date.getHours()) : String('0' + date.getHours())
+        let minutes = date.getMinutes() > 10 ? String(date.getMinutes()) : String('0' + date.getMinutes())
+        let seconds = date.getSeconds() > 10 ? String(date.getSeconds()) : String('0' + date.getSeconds())
+
+
+        let time=(`${hours}:${minutes}:${seconds}`)
+        
+        timestamp[0] = Date.now();
+        timestamp[1] = Date().toLocaleString();
+        timestamp[2] = fecha
+        timestamp[3] = time
+        
+        // console.log(timestamp[1]);
+
+        return timestamp
     }
 
     useEffect(()=>{
         console.log(b64File)
     }, [b64File])
 
-
     const saveFiles = async () => {
         let report = {}
         console.log(create_UUID())
-        console.log(files)
+        console.log("SAVE FILES: files: ", files)
         files.forEach(file => {
             report = {
                 reportID: create_UUID(),
+                title: file.name.substring(0, file.name.length-4),
                 status: 1,
                 inclusionDate: getTimeStamp()[2],
+                inclusionTime: getTimeStamp()[3],
                 inclusionDateLong: getTimeStamp()[1],
                 inclusionTimeStamp: getTimeStamp()[0],
                 report: file,
@@ -61,11 +71,18 @@ function UploadReport(props) {
                 user: 'Fadel'
             }
             // reports.push(report)
+            console.log("SAVE FILE: inclusionDateLong: ", report.inclusionDateLong)
             props.setDatos([...props.datos, report])
         })
+        // Reset the files
+        console.log("SAVE FILES: empty files")
+        setFiles([])
+
         await postReports(report)
+        
         // console.log(reports)
         // props.setDatos([...props.datos, reports[0]])
+
     }
 
     return (

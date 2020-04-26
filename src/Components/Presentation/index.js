@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
-
-import ButtonLink from './ButtonLink';
-
-import "../Style/Presentation.css";
 import { Col } from 'reactstrap';
+
+import ButtonLink from '../ButtonLink';
+
+import "./index.css";
+
 
 function Presentation() {
 

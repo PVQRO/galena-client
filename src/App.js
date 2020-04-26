@@ -9,8 +9,9 @@ import UploadReport from './Components/UploadReport';
 import UploadPage from './Components/UploadPage';
 import Details from './Components/Details';
 import Header from './Components/Header';
-import Presentation from './Components/Presentation';
-import ResultsViewer from './Components/ResultsViewer'
+import Presentation from './Components/Presentation/index';
+import Dashboard from './Components/Dashboard/index';
+
 
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/upload" component={UploadPage} />
+          <Route path="/dashboard" component={Dashboard} />
           <Presentation />
         </Switch>
         </Fragment>
