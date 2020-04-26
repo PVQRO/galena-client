@@ -9,7 +9,7 @@ function Dashboard() {
 
     const [ filters, setFilters ] = useState([]);
 
-    
+
 
     const nullMargin = {
         marginLeft: '0px',
@@ -33,7 +33,7 @@ function Dashboard() {
             </div>
             <div id="filters-main">
                 <Row>
-                    <Col xs="3">
+                    <Col xs="2">
                         <div id="db-main">
                             <Filters></Filters>
                         </div>

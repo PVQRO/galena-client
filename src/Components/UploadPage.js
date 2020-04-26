@@ -35,7 +35,7 @@ function UploadPage() {
         <Fragment>
         <div style={uploadStyle}>
             <Row style={nullMargin}>
-                <Col><h2 style={{fontSize: "37pt"}, nullMargin}>Sube tus archivos</h2></Col>
+                <Col><h2 style={{fontSize: "37pt"}, nullMargin}>Upload your files</h2></Col>
             </Row>
             <Row style={nullMargin}>
                 <Col style={nullMargin}>

@@ -46,7 +46,7 @@ function Controlador() {
         {
             reportID: '0000-0012',
             title: "File test",
-            status: 1,
+            status: 10,
             inclusionDate: '26-4-2020',
             inclusionTime: '13:03:34',
             nlpDate: '26-4-2020',

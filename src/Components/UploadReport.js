@@ -89,8 +89,8 @@ function UploadReport(props) {
         <div>
             <Fragment>
                 <MyDropzone setFiles={setFiles} setb64File={setb64File}/>
-                <Button className="btn-block" onClick={saveFiles} disabled={files.length===0 ? true : false} hidden={files.length===0 ? true : false}>
-                    Subir informe(s)
+                <Button className="btn-block" color="info" onClick={saveFiles} disabled={files.length===0 ? true : false} hidden={files.length===0 ? true : false}>
+                    Upload report(s)
                 </Button>
             </Fragment>
         </div>

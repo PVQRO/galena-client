@@ -12,11 +12,11 @@ function List(props) {
                     <tr>
                     <th>Report ID</th>
                     <th>Title</th>
-                    <th>Estado</th>
-                    <th>Fecha inclusión</th>
-                    <th>Hora de inclusión</th>
-                    <th>Fecha de metadatos</th>
-                    <th>Acceso a metadatos</th>
+                    <th>Status</th>
+                    <th>Inclusion Date</th>
+                    <th>Inclusion Tmime</th>
+                    <th>Metadata date</th>
+                    <th>Access PDF</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,11 +29,17 @@ function List(props) {
                             {r.title}
                         </UncontrolledTooltip>
                         }
-                        <td>{r.status===10 ? 'Completado' : 'Pendiente extracción'}</td>
+                        <td>{r.status===10 ? 'Done' : 'Pending'}</td>
                         <td>{r.inclusionDate }</td>
                         <td>{r.inclusionTime}</td>
                         <td>{r.nlpDate}</td>
-                        <td><a href={r.url}>Acceso</a></td>
+                        {r.status===10 &&
+                            <td><a href={r.url}>Access</a></td>
+                        }
+                        {r.status!=10 &&
+                            <td style={{color: "gray"}}> No ready yet </td>
+                        }
+                        
                         </tr>
                     ))}
                 </tbody>

@@ -88,8 +88,8 @@ function MyDropzone(props) {
       <div id="drag-and-drop" {...getRootProps({style})}>
         <input {...getInputProps()} />
         
-          <p>Arrastre aquí uno o más informes</p>
-          <em>(Solo se aceptan ficheros PDF)</em>
+          <p>Drap and drop your reports</p>
+          <em>(Just PDF files)</em>
         
       </div>
       <aside>
