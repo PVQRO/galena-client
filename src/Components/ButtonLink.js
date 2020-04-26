@@ -21,8 +21,9 @@ function ButtonLink () {
             <Link to="/upload">
                 <Button style={buttonPresentation} color="success">Subir un informe PDF <br /> <BsCloudUpload /> </Button>
             </Link>
-            
-            <Button style={buttonPresentation} color="success">Acceder a la base de datos <br /> <FaDatabase /> </Button>
+            <Link to="/dashboard">
+                <Button style={buttonPresentation} color="success">Acceder a la base de datos <br /> <FaDatabase /> </Button>
+            </Link>
         </div>
     );
     

@@ -42,12 +42,13 @@ function MyDropzone(props) {
 
   const onDrop  = useCallback(acceptedFiles => {
     // Do something with the files
-    console.log(acceptedFiles)
+    console.log("ON DROP: acceptedFiles: ", acceptedFiles)
     getBase64(acceptedFiles[0], (res) => {
       setb64File(res);
-      console.log(res)
+      console.log("ON DROP: set 64 files res: ", res)
     });
     setFiles(acceptedFiles)
+    console.log("ON DROP: files already set")
   }, [])
   const {getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject, acceptedFiles} = useDropzone({
     accept: 'application/pdf',
@@ -80,11 +81,11 @@ function MyDropzone(props) {
     reader.onerror = function (error) {
         console.log('Error: ', error);
     };
-}
+  }
 
   return (
     <Fragment>
-      <div {...getRootProps({style})}>
+      <div id="drag-and-drop" {...getRootProps({style})}>
         <input {...getInputProps()} />
         
           <p>Arrastre aquí uno o más informes</p>
@@ -95,7 +96,7 @@ function MyDropzone(props) {
           <br/>
           {files.length===0 ? 
             '' : 
-            <b>Files</b>
+            <b>Last file included</b>
           }  
           <ul>{files}</ul>
       </aside>

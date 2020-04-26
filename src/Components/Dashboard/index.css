@@ -1,0 +1,13 @@
+#filters-main {
+    width: 30vw;
+    height: 100vh;
+    background-color: darkslategray;
+    box-shadow: "7px 0px 10px gray";
+    color: white;
+    padding: 20px 0 0 0;
+}
+
+#filters-main > h2 {
+    text-align: center;
+}
+

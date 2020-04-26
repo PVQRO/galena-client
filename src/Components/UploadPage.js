@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Col, Row, Button } from 'reactstrap'
+
 import UploadReport from './UploadReport';
 import Controlador from './Controlador';
 
@@ -25,14 +26,19 @@ function UploadPage() {
         display: "inline-block",
     }
 
+    const nullMargin = {
+        marginLeft: '0px',
+        marginRight: '0px',
+    }
+
     return (
         <Fragment>
         <div style={uploadStyle}>
-            <Row>
-                <Col><h2 style={{fontSize: "37pt"}}>Sube tus archivos</h2></Col>
+            <Row style={nullMargin}>
+                <Col><h2 style={{fontSize: "37pt"}, nullMargin}>Sube tus archivos</h2></Col>
             </Row>
-            <Row>
-                <Col>
+            <Row style={nullMargin}>
+                <Col style={nullMargin}>
                     <p style={ textStyle }>
                         Upload your PDF files to extract information related with your patients to contribute to the
                         enhacement of the database
@@ -40,9 +46,9 @@ function UploadPage() {
                 </Col>
             </Row>
         </div>      
-        <Row>
+        <Row style={nullMargin}>
             <Col className="col"></Col>
-            <Col className="col-6">
+            <Col className="col-10">
                 <Controlador />
                 </Col>
             <Col className="col"></Col>

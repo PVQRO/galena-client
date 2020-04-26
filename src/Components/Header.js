@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../Style/galena-icon-white-border.png';
+import logo from '../images/galena-icon-white-border.png';
 
 import {
   Collapse,

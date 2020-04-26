@@ -9,6 +9,12 @@ import { getReports } from '../API';
 
 function Controlador() {
 
+    const emptyMessageStyle = {
+        color: "lightgray",
+        textAlign: "center",
+        padding: "20px",
+    };
+
     const [ datos, setDatos ] = useState([
 
        /*
@@ -39,8 +45,10 @@ function Controlador() {
         } */
         {
             reportID: '0000-0012',
+            title: "File test",
             status: 1,
             inclusionDate: '26-4-2020',
+            inclusionTime: '13:03:34',
             nlpDate: '26-4-2020',
             url: '#',
             user: 'Fadel'
@@ -59,19 +67,24 @@ function Controlador() {
 
         }
         consultaApi();
-        console.log(datos)
+        console.log("USE EFFECT: datos: ", datos)
     },[])
+
 
     return (
         <div className="App">
 
             <Fragment>
                 <UploadReport setDatos={setDatos} datos={datos}/>
-
-                <h3 style={{ textAlign: "center" }}>Uploaded reports to the DB</h3>
-
                 <br/>
-                <List datos={datos}/>
+                {datos.length === 0
+                    ? <h3 style={ emptyMessageStyle }>Reports list is emtpy. Try to upload some files to populate it</h3>
+                    : <Fragment>
+                        <h3 style={{ textAlign: "center" }}>Uploaded reports</h3><br/>
+                        <List datos={datos}/>
+                      </Fragment>
+                }
+                
             </Fragment>
         </div>
     );
