@@ -2,37 +2,58 @@
     height: 25%;
     }
     .categories-result .bt{
-        background-color: white;
-        color: blue;
-        border: 1px solid  blue;
+        background-color: lightgrey; color: black;
+        border: 1px solid  black;
         border-radius: 5px;
-        margin-top: 0.2rem;
-        margin-bottom: 0.2rem;
+        width: 100%;
+        margin-top: 0.2rem; margin-bottom: 0.2rem;
+        font-size: 12px;
+    }
+    @media screen and (max-height: 900px){
+        .categories-result .bt{
+            font-size: 10px;
+        }
     }
     .categories-result .bt:hover{
-        background-color: blue;
-        color: white;
+        background-color: darkgrey;
+    }
+    .categories-result .categories [class^='form-check']:hover{
+        cursor: pointer;
     }
 
 .header-categories-result{
     background-color: LightGray;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     padding: 0.2rem 0.2rem 0.1rem 0.7rem;
-    margin: 1rem 0.5rem 1rem 0.5rem;
-    margin-bottom: 2rem;
+    /*margin: 1rem 0.5rem 1rem 0.5rem;*/
     }
 
-.categories-result .categories{
+.categories{
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+}.categories section{
+    display: flex; flex-direction: row;
+    }
+    .categories section > div{
+        margin-left: 0.75rem;
+        margin-bottom: 0.2rem;
+        }
+
+.categories-selection-buttons{
     display: flex;
-    }
-    .categories-result .categories .form-check:hover{
-        cursor: pointer;
-    }
-
-.categories-selection-buttons .bt{
-    width: 175px;
+    flex-direction: column;
 }
 
-.categories-export-buttons .bt{
-    margin-left: 0.5rem;
-}
+.categories-export-buttons{
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    }.categories-export-buttons > div{
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and (max-height: 900px){
+        .categories-export-buttons{
+            margin-top: 0.1rem;
+        }
+    }
+
