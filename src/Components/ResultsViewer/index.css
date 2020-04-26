@@ -1,14 +1,11 @@
-body{
-    background-color: #f2f2f2!important;
-}
-
 .results-viewer{
-    height: 85vh;
+    height: 100vh;
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin-top: -20px;
 }
 
 .results-viewer .diagnostic, .result-list{
@@ -17,10 +14,10 @@ body{
     -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.4);
     box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.4);
 
-    height: 79vh;
+    height: 80vh;
     vertical-align: top;
-    margin-right: 1rem; margin-left: 1rem;
-    border-radius: 5px;
+    /*margin-right: 1rem; margin-left: 1rem;
+    border-radius: 5px;*/
 
 }
 

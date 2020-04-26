@@ -9,5 +9,57 @@
 }
 
 .diagnostic-content img{
-    width: 75%!important;
+    width: 100%!important;
+    }
+    @media screen and (max-width: 1700px) {
+        .diagnostic-content img{
+            width: 90%!important;
+        }
+    }
+    @media screen and (max-width: 1600px) {
+        .diagnostic-content img{
+            width: 80%!important;
+        }
+    }
+    @media screen and (max-width: 1425px) {
+        .diagnostic-content img{
+            width: 70%!important;
+        }
+    }
+    @media screen and (max-width: 1260px) {
+        .diagnostic-content img{
+            width: 65%!important;
+        }
+    }
+
+
+/******/
+/* CATEGORIES COLOURS */
+
+.motivo-consulta{
+    background-color: yellow;
+}
+
+.sintoma{
+    background-color: aqua;
+}
+
+.exploracion{
+    background-color: #666666;
+}
+
+.antecedentes{
+    background-color: lightgrey;
+}
+
+.factores-riesgo{
+    background-color: red;
+}
+
+.signos{
+    background-color: #00ff00;
+}
+
+.filiacion{
+    background-color: #e600e6;
 }

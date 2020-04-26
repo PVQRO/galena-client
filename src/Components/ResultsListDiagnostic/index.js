@@ -30,9 +30,7 @@ export default function ResultsList(props){
 
             if(list[rootIdEl].lines != undefined){
                 if(list[rootIdEl].lines.length > 0){
-                    for(var idLines in list[rootIdEl].lines){
-                        subList.push(<li>{list[rootIdEl].lines[idLines]._text}</li>)
-                    }
+                    subList.push(getHTMLFromList(list[rootIdEl].lines))
                 }else if(typeof list[rootIdEl].lines === 'object'){
                     subList.push(<li>{list[rootIdEl].lines._text}</li>)
                 }
@@ -40,9 +38,7 @@ export default function ResultsList(props){
 
             if(list[rootIdEl].section != undefined){
                 if(list[rootIdEl].section.length > 0){
-                    for(var idContentSection in list[rootIdEl].section){
-                        subList.push(<li>{list[rootIdEl].section[idContentSection]._text}</li>)
-                    }
+                    subList.push(getHTMLFromList(list[rootIdEl].section))
                 }else if(typeof list[rootIdEl].section === 'object'){
                     subList.push(<li>{list[rootIdEl].section._text}</li>)
                 }
@@ -52,11 +48,11 @@ export default function ResultsList(props){
                 var textUntilColon = list[rootIdEl]._text.split(':', 2);
 
                 if(subList.length > 0){
-                    textUntilColon.legth == 1 ? resultHMTLList.push(<li className="category-level" onClick={props.categoryClick}><b>{list[rootIdEl]._text}</b><ul>{subList}</ul></li>)
-                                          : resultHMTLList.push(<li className="category-level" onClick={props.categoryClick}><b>{textUntilColon[0]}:</b> {textUntilColon[1]}<ul>{subList}</ul></li>)  
+                    textUntilColon.legth == 1 ? resultHMTLList.push(<li><b>{list[rootIdEl]._text}</b><ul>{subList}</ul></li>)
+                                          : resultHMTLList.push(<li><b>{textUntilColon[0]}:</b> {textUntilColon[1]}<ul>{subList}</ul></li>)  
                 }else{
-                    textUntilColon.legth == 1 ? resultHMTLList.push(<li className="category-level" onClick={props.categoryClick}><b>{list[rootIdEl]._text}</b></li>)
-                                          : resultHMTLList.push(<li className="category-level" onClick={props.categoryClick}><b>{textUntilColon[0]}:</b> {textUntilColon[1]}</li>)
+                    textUntilColon.legth == 1 ? resultHMTLList.push(<li>{list[rootIdEl]._text}</li>)
+                                          : resultHMTLList.push(<li><b>{textUntilColon[0]}:</b> {textUntilColon[1]}</li>)
                 } 
             }
         }
