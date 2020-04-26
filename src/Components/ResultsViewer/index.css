@@ -1,3 +1,6 @@
+body{
+    background-color: #d2ebf7 !important;
+}
 .results-viewer{
     height: 100vh;
     display:flex;
