@@ -3,10 +3,8 @@
     }
     .categories-result .bt{
         background-color: lightgrey; color: black;
-        border: 1px solid  black;
-        border-radius: 5px;
-        width: 100%;
-        margin-top: 0.2rem; margin-bottom: 0.2rem;
+        border: 1px solid  black; border-radius: 5px;
+        width: 100%; margin-top: 0.2rem; margin-bottom: 0.2rem;
         font-size: 12px;
     }
     @media screen and (max-height: 900px){
@@ -22,34 +20,32 @@
     }
 
 .header-categories-result{
-    background-color: LightGray;
+    background-color: #d2ebf7;
+    border-top: 1px solid lightgrey; border-bottom: 1px solid lightgrey;
     /*border-radius: 5px;*/
     padding: 0.2rem 0.2rem 0.1rem 0.7rem;
     /*margin: 1rem 0.5rem 1rem 0.5rem;*/
     }
 
 .categories{
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
+    margin-top: 0.5rem; margin-right: 0.5rem;
 }.categories section{
     display: flex; flex-direction: row;
     }
     .categories section > div{
-        margin-left: 0.75rem;
-        margin-bottom: 0.2rem;
+        margin-left: 0.75rem; margin-bottom: 0.2rem; margin-top: 0.2rem;
+        font-size: 14px;
+        width: 30%
         }
 
 .categories-selection-buttons{
-    display: flex;
-    flex-direction: column;
+    display: flex; flex-direction: column;
 }
 
 .categories-export-buttons{
-    margin-top: 1rem;
-    margin-right: 0.5rem;
+    margin-top: 1rem; margin-right: 0.5rem;
     }.categories-export-buttons > div{
-        display: flex;
-        flex-direction: column;
+        display: flex; flex-direction: column;
     }
     @media screen and (max-height: 900px){
         .categories-export-buttons{

@@ -1,12 +1,24 @@
 .diagnostic-content {
     height: 75%;
-}
-
-.diagnostic-content{
     overflow-x: hidden;
     overflow-y: scroll;
     font-size: 12px!important;
 }
+.diagnostic-content::-webkit-scrollbar-track
+    {
+        border-radius: 10px;
+    }
+    .diagnostic-content::-webkit-scrollbar
+    {
+        width: 12px;
+    }
+    .diagnostic-content::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: lightgrey;
+    }
+
 
 .diagnostic-content img{
     width: 100%!important;

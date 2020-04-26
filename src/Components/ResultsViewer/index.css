@@ -14,19 +14,36 @@
     -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.4);
     box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.4);
 
+
     height: 80vh;
     vertical-align: top;
     /*margin-right: 1rem; margin-left: 1rem;
     border-radius: 5px;*/
 
-}
+    }
+    .results-viewer .diagnostic{
+        max-width: 50%;
+        border: double 8px #d2ebf7;
+        /*border-top-left-radius: 5px; border-bottom-left-radius: 5px;*/
+    }
+    .results-viewer .result-list{
+        max-width: 35%;
+        overflow-x: hidden; overflow-y: scroll;
 
-.diagnostic{
-    max-width: 50%;
-}
-
-.result-list{
-    max-width: 35%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
+        border-top: double 8px #d2ebf7; border-bottom: double 8px #d2ebf7; border-right: double 8px #d2ebf7;
+        /*border-top-right-radius: 6px; border-bottom-right-radius: 6px;*/
+    }
+    .result-list::-webkit-scrollbar-track
+    {
+        border-radius: 2px;
+    }
+    .result-list::-webkit-scrollbar
+    {
+        width: 12px;
+    }
+    .result-list::-webkit-scrollbar-thumb
+    {
+        border-radius: 7px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: lightgrey;
+    }

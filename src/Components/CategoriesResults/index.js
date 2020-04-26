@@ -114,6 +114,10 @@ export default function CategoriesContent(props){
                                 <input type="checkbox" className="form-check-input" checked="true" />
                                 <label className="form-check-label" for="exampleCheck1">Signos</label>
                             </div>
+                            <div class="form-check" style={{backgroundColor: "#0000ff"}} onClick={selectCategory}>
+                                <input type="checkbox" className="form-check-input" checked="true" />
+                                <label className="form-check-label" for="exampleCheck1">Tratamiento</label>
+                            </div>
                         </section>
                     </div>
                     <div className="col-md-3 categories-selection-buttons">
