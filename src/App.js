@@ -11,6 +11,7 @@ import Details from './Components/Details';
 import Header from './Components/Header';
 import Presentation from './Components/Presentation/index';
 import Dashboard from './Components/Dashboard/index';
+import ResultViewer from './Components/ResultsViewer/index';
 
 import './App.css';
 
@@ -24,6 +25,7 @@ function App() {
         <Switch>
           <Route path="/upload" component={UploadPage} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/result" component={ResultViewer} />
           <Presentation />
         </Switch>
         </Fragment>
