@@ -12,7 +12,6 @@ function UploadPage() {
         color: "white",
         textAlign: "center",
         paddingTop:  "40px",
-        width: "100vw",
         paddingBottom: "30px",
         marginBottom: "40px",
         boxShadow: "0px 7px 10px gray" 

@@ -1,0 +1,19 @@
+#filter-main {
+    margin: 20px 10px 30px 0;
+    padding: 0 20px 30px 10px;
+    border-style: solid;
+    border-width: 1px; 
+    border-color: darkslategray;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#filter-options > input[type=text] {
+    border-radius: 5px;
+    height: 39px;
+    width: 100%;
+    padding: 5px;
+    font-size: 11pt;
+    
+}

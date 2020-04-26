@@ -1,9 +1,28 @@
+#filters-presentation {
+    background-color: darkslategray;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    padding: 30px 0 20px 0;
+    box-shadow: 0px 2px 10px gray;
+}
+
+#filters-presentation h2 {
+    font-size: 30pt;
+}
+
+.filters-description {
+    width: 50vw;
+    font-style: italic;
+    font-size: 15pt;
+    display: inline-block;
+    text-align: center;
+}
+
 #filters-main {
     width: 30vw;
     height: 100vh;
-    background-color: darkslategray;
-    box-shadow: 7px 0px 10px gray;
-    color: white;
+    box-shadow: 1px 0px 10px gray;
     padding: 20px 0 0 0;
 }
 
