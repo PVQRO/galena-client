@@ -8,7 +8,8 @@ function UploadPage() {
 
     const uploadStyle = {
         width: "100vw",
-        backgroundColor: "darkslategray",
+        /* backgroundColor: "darkslategray", */
+        backgroundColor: "#46749c",
         color: "white",
         textAlign: "center",
         paddingTop:  "40px",

@@ -2,11 +2,17 @@
 #presentation-main {
     width: 100vw;
     height: 100vh;
-    background-color: darkslategray;
+    /* background-color: darkslategray; */
+    background-color: #46749c;
     /* background-color: #103174; */
-    padding-top: 50px;
     text-align: center;
     color: white;
+}
+
+#presentation-main h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 60pt;
 }
 
 #presentation-main p {
@@ -21,13 +27,8 @@
 #presentation-main > div {
     width: 100vw;
     height: 100vh;
-    background: url('../../images/galena-icon-green.png');
+    /* background: url('../../images/galena-icon-white-border.png'); */
     background-position: center;
     background-repeat: no-repeat;
     
-}
-
-h1 {
-    text-align: center;
-    font-size: 60pt;
 }

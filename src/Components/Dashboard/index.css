@@ -1,5 +1,6 @@
 #filters-presentation {
-    background-color: darkslategray;
+    /* background-color: darkslategray; */
+    background-color: #46749c;
     width: 100vw;
     color: white;
     text-align: center;
@@ -19,8 +20,8 @@
     text-align: center;
 }
 
-#filters-main {
-    width: 30vw;
+#db-main {
+    /* width: 30vw; */
     height: 100vh;
     box-shadow: 1px 0px 10px gray;
     padding: 20px 0 0 0;

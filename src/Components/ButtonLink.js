@@ -19,10 +19,10 @@ function ButtonLink () {
     return (
         <div>
             <Link to="/upload">
-                <Button style={buttonPresentation} color="success">Subir un informe PDF <br /> <BsCloudUpload /> </Button>
+                <Button style={buttonPresentation} color="info">Subir un informe PDF <br /> <BsCloudUpload /> </Button>
             </Link>
             <Link to="/dashboard">
-                <Button style={buttonPresentation} color="success">Acceder a la base de datos <br /> <FaDatabase /> </Button>
+                <Button style={buttonPresentation} color="info">Acceder a la base de datos <br /> <FaDatabase /> </Button>
             </Link>
         </div>
     );
