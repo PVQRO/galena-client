@@ -43,6 +43,9 @@ const Header = (props) => {
             <NavItem>
               <NavLink href="https://github.com/PVQRO/Proyecto-GALENA" target="_blank">GitHub</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/about">About</NavLink>
+            </NavItem>
             {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
