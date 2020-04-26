@@ -10,6 +10,7 @@ import UploadPage from './Components/UploadPage';
 import Details from './Components/Details';
 import Header from './Components/Header';
 import Presentation from './Components/Presentation';
+import ResultsViewer from './Components/ResultsViewer'
 
 import './App.css';
 
