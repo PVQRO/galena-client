@@ -38,11 +38,20 @@ const Header = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="https://taiga.vencealvirus.software.imdea.org/project/pvqro-galena/timeline" target="_blank">Hackathon Covid-19</NavLink>
+              <NavLink href="https://devpost.com/software/galena-databook" target="_blank">Hackathon Covid-19</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/PVQRO" target="_blank">GitHub</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/upload">Upload Diagnostic</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/dashboard">Database</NavLink>
+            </NavItem>
+            {/*<NavItem>
+              <NavLink href="/about">About</NavLink>
+            </NavItem>*/}
             {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
