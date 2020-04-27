@@ -50,9 +50,9 @@ const Header = (props) => {
             <NavItem>
               <NavLink href="/dashboard">Database</NavLink>
             </NavItem>
-            {/*<NavItem>
+            <NavItem>
               <NavLink href="/about">About</NavLink>
-            </NavItem>*/}
+            </NavItem>
             {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
