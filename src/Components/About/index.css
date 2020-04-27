@@ -1,0 +1,25 @@
+.container{
+    margin-top: 5rem;
+}
+
+.contributor-image img{
+    width: 300px;
+    height: 300px;
+    border-radius: 25%;
+}
+
+.name{
+    color: #46749c;
+}
+
+.social-media a{
+    text-decoration: none;
+}
+
+.row{
+    padding-bottom: 3rem;
+}
+.row:not(:first-child){
+    border-top: solid 1px lightgrey;
+    padding-top: 3rem;
+}
