@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import logo from '../images/galena-icon-white-border.png';
+import logo from '../../images/galena-icon-white-border.png';
+import './index.css';
 
 import {
   Collapse,
@@ -40,6 +41,7 @@ const Header = (props) => {
             <NavItem>
               <NavLink href="https://devpost.com/software/galena-databook" target="_blank">Hackathon Covid-19</NavLink>
             </NavItem>
+            <hr clasName="dotted"/>
             <NavItem>
               <NavLink href="https://github.com/PVQRO" target="_blank">GitHub</NavLink>
             </NavItem>
