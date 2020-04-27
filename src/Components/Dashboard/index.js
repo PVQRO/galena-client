@@ -1,10 +1,15 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Col, Row, Button } from 'reactstrap';
 import Filters from '../Filters/index';
+import DatabaseViewer from '../DatabaseViewer/index';
 
 import './index.css';
 
 function Dashboard() {
+
+    const [ filters, setFilters ] = useState([]);
+
+
 
     const nullMargin = {
         marginLeft: '0px',
@@ -27,9 +32,17 @@ function Dashboard() {
             </Row>
             </div>
             <div id="filters-main">
-                <div id="db-main">
-                    <Filters></Filters>
-                </div>
+                <Row>
+                    <Col xs="2">
+                        <div id="db-main">
+                            <Filters></Filters>
+                        </div>
+                    </Col>
+                    <Col>
+                        <DatabaseViewer filters={filters} />
+                    </Col>
+                </Row>
+                
             </div>
         </Fragment>
     );

@@ -33,13 +33,13 @@ const Header = (props) => {
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">
           <img src={logo} style={{width:40, marginTop: -7}} />
-          {' Proyecto Galena'}
+          {' Galena Databook'}
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="https://devpost.com/software/galena-databook" target="_blank">Hackathon Covid-19</NavLink>
+              <NavLink href="https://devpost.com/software/galena-databook" target="_blank">Devpost </NavLink>
             </NavItem>
             <hr clasName="dotted"/>
             <NavItem>
@@ -72,7 +72,7 @@ const Header = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown> */}
           </Nav>
-          <NavbarText>Base de datos clínicos COVID-19</NavbarText>
+          <NavbarText>Clinic Database for COVID-19</NavbarText>
         </Collapse>
       </Navbar>
     </div>

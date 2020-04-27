@@ -15,7 +15,7 @@ function Filters(){
         },
         {
             title: "Patient Status",
-            options: ["Recovered", "Not recovered", "Dead from COVID-19", "Unknown", "Dead from other cause"]
+            options: ["Recovered", "Not recovered", "Dead from COVID-19", "Dead from other cause"]
         },
         {
             title: "Symptoms in recovery phase",
