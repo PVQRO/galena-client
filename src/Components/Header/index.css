@@ -1,3 +1,4 @@
-hr.dotted {
-    border-top: 3px dotted #bbb;
-  }
+.navbar-nav .nav-item a:hover{
+    color: #46749c!important;
+    font-weight: bold;
+}

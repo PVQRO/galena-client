@@ -41,12 +41,11 @@ const Header = (props) => {
             <NavItem>
               <NavLink href="https://devpost.com/software/galena-databook" target="_blank">Devpost </NavLink>
             </NavItem>
-            <hr clasName="dotted"/>
             <NavItem>
               <NavLink href="https://github.com/PVQRO" target="_blank">GitHub</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/upload">Upload Diagnostic</NavLink>
+              <NavLink href="/upload">Upload Report</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/dashboard">Database</NavLink>
