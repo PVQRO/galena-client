@@ -14,42 +14,42 @@ function DatabaseViewer(props) {
         const patients = [
             {
                 id: 1,
-                name: "Tommy",
+                name: "####",
                 gender: "Male",
                 status: "Dead from COVID-19",
                 symptons: "Yes"
             },
             {
                 id: 2,
-                name: "Arthur",
+                name: "####",
                 gender: "Male",
                 status: "Dead from other cause",
                 symptons: "Yes"
             },
             {
                 id: 3,
-                name: "Polly",
+                name: "####",
                 gender: "Female",
                 status: "Not Recovered",
                 symptons: "Yes"
             },
             {
                 id: 4,
-                name: "Ada",
+                name: "####",
                 gender: "Female",
                 status: "Recovered",
                 symptons: "No"
             },
             {
                 id: 5,
-                name: "John",
+                name: "####",
                 gender: "Male",
                 status: "Dead from COVID-19",
                 symptons: "Yes"
             },
             {
                 id: 6,
-                name: "Lizzie",
+                name: "####",
                 gender: "Female",
                 status: "Recoverd",
                 symptons: "No"
