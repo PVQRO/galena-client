@@ -28,7 +28,7 @@ function App() {
           <Route path="/upload" component={UploadPage} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/result" component={ResultViewer} />
-          <Route path="/about" component={AboutPage}/>
+          {/*<Route path="/about" component={AboutPage}/>*/}
           <Presentation />
         </Switch>
         </Fragment>
