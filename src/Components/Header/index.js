@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { NavLink as RRNavLink } from 'react-router-dom';
 import logo from '../../images/galena-icon-white-border.png';
 import './index.css';
 
@@ -29,7 +30,7 @@ const Header = (props) => {
   }
 
   return (
-    <div>
+  <div>
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">
           <img src={logo} style={{width:40, marginTop: -7}} />
@@ -45,13 +46,13 @@ const Header = (props) => {
               <NavLink href="https://github.com/PVQRO" target="_blank">GitHub</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/upload">Upload Report</NavLink>
+              <NavLink tag={RRNavLink} to="/upload" activeClassName="active">Upload Report</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/dashboard">Database</NavLink>
+              <NavLink tag={RRNavLink} to="/dashboard" activeClassName="active">Database</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/about">About</NavLink>
+              <NavLink tag={RRNavLink} to="/about" activeClassName="active">About</NavLink>
             </NavItem>
             {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
