@@ -54,6 +54,9 @@ const Header = (props) => {
             <NavItem>
               <NavLink tag={RRNavLink} to="/about" activeClassName="active">About</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink tag={RRNavLink} to="/contributors" activeClassName="active">Contributors</NavLink>
+            </NavItem>
             {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
