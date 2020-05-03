@@ -13,6 +13,14 @@
     .about-page .comic-sans{
         font-family: "Comic Sans MS", cursive, sans-serif;
     }
+    @media screen and (max-width: 1500px){
+        .about-page .monospace{
+            font-size: 14px;
+        }
+        .about-page .comic-sans{
+            font-size: 14px;
+        }
+    }
 
 .presentation > div{
     padding-left: 2rem;
