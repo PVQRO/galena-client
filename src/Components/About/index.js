@@ -1,6 +1,5 @@
 import React from 'react';
 import { IoIosArrowDown } from "react-icons/io";
-import Contributor from '../Contributor';
 import './index.css';
 
 export default function AboutPage(){

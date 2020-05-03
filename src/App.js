@@ -13,7 +13,6 @@ import Presentation from './Components/Presentation/index';
 import Dashboard from './Components/Dashboard/index';
 import ResultViewer from './Components/ResultsViewer/index';
 import AboutPage from './Components/About';
-import ContributorsPage from './Components/Contributors';
 
 
 import './App.css';
