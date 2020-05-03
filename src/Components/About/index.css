@@ -1,24 +1,45 @@
 .about-page{
-    margin-top: 5rem;
     height: 100%;
-    max-width: 80%;
-    margin: 5rem auto;
+    max-width: 85%;
+    margin: 0 auto;
     }
     .about-page .row{
         padding-bottom: 3rem;
         height: 100vh;
     }
+    .about-page .monospace {
+        font-family: "Lucida Console", Courier, monospace;
+    }
+    .about-page .comic-sans{
+        font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+
+.presentation > div{
+    padding-left: 2rem;
+}
 
 .video-presentation{
     justify-content: center;
     align-items: center;
+    margin: auto 0;
     }
     .video-presentation iframe{
         border-radius: 20px;
     }
 
+.presentation-project{
+    margin: auto 0;
+    }
+    .presentation-project > h3{
+        color: #46749c;
+    }
+    .presentation-project > h3:nth-child(n+2){
+        margin-top: 5rem;
+    }
+
 .navigate-arrow{
     margin: 0 auto;
+    color: #46749c;
 }
 .navigate-arrow:hover{
     cursor: pointer;
@@ -32,24 +53,4 @@
         from { padding-bottom: 10pt; }
         to { padding-bottom: 0pt; }
     }
-
-.contributors .row:nth-child(n+3){
-    border-top: solid 1px lightgrey;
-    padding-top: 3rem;
-}
-
-.contributor-image img{
-    width: 300px;
-    height: 300px;
-    border-radius: 25%;
-    border: 1px solid 
-}
-
-.presentation-contributor .name{
-    color: #46749c;
-}
-
-.presentation-contributor .social-media a{
-    text-decoration: none;
-}
 

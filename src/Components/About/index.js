@@ -1,21 +1,26 @@
 import React from 'react';
-import { FaLinkedin } from 'react-icons/fa';
 import { IoIosArrowDown } from "react-icons/io";
+import Contributor from '../Contributor';
 import './index.css';
 
 export default function AboutPage(){
 
+    const onClickArrow = function(){
+        window.scrollTo(0, window.innerHeight)
+        console.log('Click arrow')
+    }
+
 
     return <div className="about-page">
             <div className="row presentation">
-                <div className="col-5 video-presentation">
-                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/EQtnySUjpXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div className="col-6 video-presentation">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/EQtnySUjpXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div className="col-7 presentation-project">
+                <div className="col-6 presentation-project">
                     <h3>Inspiration</h3>
-                    <p>We have the responsibility and the technological tools to design and plan action strategies in the face of the current health crisis. Now, more than ever, our role is to provide tools to the system that facilitate decision-making and the generation of knowledge for the health of the entire citizenry. Constituting the first line of action in this crisis.</p>
+                    <p className="monospace">We have the responsibility and the technological tools to design and plan action strategies in the face of the current health crisis. Now, more than ever, our role is to provide tools to the system that facilitate decision-making and the generation of knowledge for the health of the entire citizenry. Constituting the first line of action in this crisis.</p>
                     <h3>What it does</h3>
-                    <p>We propose to carry out a database exchange system. Doctors and researchers will be able to extract from the anonymised medical reports the variables of interest of the patients affected by Covid-19 and other pathologies through natural language processing, create their own databases, share them among their colleagues or even among other research groups from different communities or countries. Promoting free access to data among physicians, allowing research studies to be carried out with greater speed and sample size, creating a communication network between scientists and thus being able to promote new prevention, diagnosis and treatment measures.</p>
+                    <p className="monospace">We propose to carry out a database exchange system. Doctors and researchers will be able to extract from the anonymised medical reports the variables of interest of the patients affected by Covid-19 and other pathologies through natural language processing, create their own databases, share them among their colleagues or even among other research groups from different communities or countries. Promoting free access to data among physicians, allowing research studies to be carried out with greater speed and sample size, creating a communication network between scientists and thus being able to promote new prevention, diagnosis and treatment measures.</p>
                     {/*<h5>The solution’s impact to the crisis</h5>
                     <p>Our platform will allow a more united collaboration between researchers, providing a tool to share ideas, projects and data. They will be able to create their own databases through the extraction of anonymous reports. It will also allow them to incorporate and unify already created and publicly accessible databases. All this, with the intention of accelerating the investigation and using prediction tools based on artificial intelligence or other statistical methods (in which large data samples are required) to fight and defeat the Covid-19</p>
                     <h5>How can this idea be replicable in other contexts</h5>
@@ -38,41 +43,7 @@ We can treat health data and our basis of legitimacy will be article 9.2 G) in a
 To provide content to our database, we must have access to the medical records that have health data, that is, we must request a transfer of health data to the corresponding institutions, and in this case there are have to have the following precautions:</p>
                     */}
                 </div>
-                <div class="navigate-arrow"> <IoIosArrowDown /> </div>
-            </div>
-            <div className="row contributors">
-                <h3>Contributors</h3>
-                <div className="row">
-                    <div className="col contributor-image">
-                        <img src="pablo.png"/>
-                    </div>
-                    <div className="col">
-                        <div className="presentation-contributor">
-                            <div className="name"><h2>Pablo Vaquero Martínez</h2></div>
-                            <div className="current-position"><h5><i>Medical student</i></h5></div>
-                            <br/>
-                            <div className="description">Passionate about medicine and greatly interested in all the technological advances of our era, focused on the diagnosis and treatment of pathologies, but also to provide a quality of life and care to the patients. Always open to the development of new projects</div>
-                            <br/>
-                            <div className="social-media"><a href="https://www.linkedin.com/in/pablo-vaquero-mart%C3%ADnez-162088196/"><FaLinkedin size="2em"/></a></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col contributor-image">
-                        <img src="pablo.png"/>
-                    </div>
-                    <div className="col">
-                        <div className="presentation-contributor">
-                            <div className="name"><h2>Pablo Vaquero Martínez</h2></div>
-                            <div className="current-position"><h5><i>Medical student</i></h5></div>
-                            <br/>
-                            <div className="description">Passionate about medicine and greatly interested in all the technological advances of our era, focused on the diagnosis and treatment of pathologies, but also to provide a quality of life and care to the patients. Always open to the development of new projects</div>
-                            <br/>
-                            <div className="social-media"><a href="https://www.linkedin.com/in/pablo-vaquero-mart%C3%ADnez-162088196/"><FaLinkedin size="2em"/></a></div>
-                        </div>
-                    </div>
-                </div>
+                {/*<div class="navigate-arrow" onClick={onClickArrow}> Contributors <IoIosArrowDown/> </div>*/}
             </div>
         </div>
-
 }
