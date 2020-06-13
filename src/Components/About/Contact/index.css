@@ -1,0 +1,12 @@
+.contact-us{
+    margin: 0;
+    width: 100%;
+    padding: 7rem 0 7rem 0;
+    background-color: #f6f6f6;
+    }.contact-us .main-description{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .contact-us .main-description .section-title{
+        text-align: center;
+    }

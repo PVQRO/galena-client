@@ -1,0 +1,14 @@
+.contributors{
+    height: 100%;
+    max-width: 85%;
+    margin: 2rem auto;
+    }
+    .contributors > h3{
+    color: #46749c;
+    }
+    .contributors .col:first-child{
+        margin-top: 3rem;
+    }
+    .contributors .monospace {
+        font-family: "Lucida Console", Courier, monospace;
+    }

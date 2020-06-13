@@ -1,0 +1,14 @@
+.new-cards .card{
+    width: 20rem;
+    height: 27rem;
+    margin: 0 auto;
+    }
+    .new-cards .card .card-text{
+        font-size: 13px;
+    }
+    .new-cards .card:hover{
+        width: 21rem;
+    }
+    .new-cards .card a{
+        margin: 0 auto;
+    }

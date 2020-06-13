@@ -1,11 +1,7 @@
 .about-page{
     height: 100%;
-    max-width: 85%;
-    margin: 0 auto;
-    }
-    .about-page .row{
-        padding-bottom: 3rem;
-        height: 100vh;
+    width: 100%;
+    margin: 0;
     }
     .about-page .monospace {
         font-family: "Lucida Console", Courier, monospace;
@@ -21,47 +17,15 @@
             font-size: 14px;
         }
     }
-
-.presentation > div{
-    padding-left: 2rem;
-}
-
-.video-presentation{
-    justify-content: center;
-    align-items: center;
-    margin: auto 0;
-    }
-    .video-presentation iframe{
-        border-radius: 20px;
-    }
-
-.presentation-project{
-    margin: auto 0;
-    }
-    .presentation-project > h3{
+    .about-page h3, .about-page h5{
         color: #46749c;
     }
-    .presentation-project > h3:nth-child(n+2){
-        margin-top: 5rem;
-    }
-    .presentation-project > p{
-        text-align: justify;
-    }
 
-.navigate-arrow{
-    margin: 0 auto;
-    color: #46749c;
+.section-title::after, .section-title::before{
+    content: "-";
+    display: inline-block;
+    height: 2px;
+    margin: 0 10px;
+
 }
-.navigate-arrow:hover{
-    cursor: pointer;
-    }
-    .navigate-arrow > svg{
-        animation: arrow-navigate-animation 1s;
-  	    animation-iteration-count: infinite;
-  	    animation-direction: reverse;
-    }
-    @keyframes arrow-navigate-animation{
-        from { padding-bottom: 10pt; }
-        to { padding-bottom: 0pt; }
-    }
 

@@ -1,0 +1,15 @@
+.presentation-project{
+    margin: 0 auto;
+    padding: 7rem 0 7rem 0;
+    }
+    .presentation-project iframe{
+        width: 50%;
+        height: 500px;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 480px){
+        .presentation-project iframe{
+            width: 95%;
+            height: 300px;
+        }
+    }

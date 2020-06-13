@@ -1,0 +1,21 @@
+.contributor-image img{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+}
+
+.presentation-contributor{
+    margin-top: 1rem;
+    }
+    .presentation-contributor .name{
+        color: #46749c;
+    }
+    .presentation-contributor .social-media{
+        border-radius: 100%;
+        }
+    .presentation-contributor .social-media a{
+        text-decoration: none;
+    }
+    .presentation-contributor .description{
+        font-size: 12px;
+    }

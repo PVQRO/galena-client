@@ -1,0 +1,26 @@
+.news{
+    margin: 0;
+    width: 100%;
+    padding: 7rem 0 7rem 0;
+    display: block;
+    background-color: #f6f6f6;
+    }
+    .news .news-title{
+        text-align: center;
+        justify-content: center;
+    }
+    @media screen and (max-width: 480px){
+        .news .news-title{
+            padding-bottom: -7rem;
+        }
+    }
+
+    .new-cards col{
+        align-content: center;
+        justify-content: center;
+        }
+        @media screen and (max-width: 480px){
+            .new-cards .col{
+                    padding: 2rem 0 0 0;
+                }
+        }

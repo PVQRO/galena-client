@@ -1,0 +1,19 @@
+.contributors{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 7rem 0 7rem 0;
+    }
+    .contributors .col:first-child{
+        margin-top: 7rem;
+    }
+    .contributors .title-contributors{
+        width: 100%;
+        }
+        .contributors .title-contributors .section-title{
+            margin: 0 auto;
+        }
+    .contributors .list-contributors{
+        max-width: 70%;
+        margin: 0 auto;
+    }

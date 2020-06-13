@@ -1,0 +1,43 @@
+.whatitdoes{
+    margin: 0;
+    width: 100%;
+    padding: 7rem 0 7rem 0;
+    background-color: #f6f6f6;
+    }
+    .whatitdoes .main-description{
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    .whatitdoes .main-description p {
+        text-align: justify;
+    }
+    @media screen and (max-width: 480px){
+        .whatitdoes .main-description{
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+.whatitdoes h3, .replicable-description h5{
+    text-align: center;
+}
+
+.replicable-description{
+    padding: 5rem 0 5rem 0;
+    margin: 2rem auto 2rem auto;
+    max-width: 90%;
+    }
+    .replicable-description p{
+        font-size: 13px;
+        text-align: justify;
+    }
+    .replicable-description .col{
+        padding: 0 4rem 0 4rem;
+    }
+    @media screen and (max-width: 480px){
+        .replicable-description{
+            margin: 0 auto 0 auto;
+        }
+        .replicable-description .col{
+            padding: 2rem 4rem 0 4rem;
+        } 
+    }
