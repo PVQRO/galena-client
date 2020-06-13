@@ -1,3 +1,6 @@
+.header{
+    height: 5vh;
+}
 .navbar-nav .nav-item a:hover{
     color: #46749c!important;
     font-weight: bold;

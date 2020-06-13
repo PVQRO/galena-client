@@ -30,7 +30,7 @@ const Header = (props) => {
   }
 
   return (
-  <div>
+  <div className="header">
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">
           <img src={logo} style={{width:40, marginTop: -7}} />
